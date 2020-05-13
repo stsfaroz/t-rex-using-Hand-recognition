@@ -10,7 +10,6 @@ import random
 cap = cv2.VideoCapture(0)
 hand_cascade = cv2.CascadeClassifier('hand.xml')
 count = 0
-print("ok")
 driver = webdriver.Chrome(executable_path='./chromedriver')
 driver.get('https://chromedino.com/')
 
