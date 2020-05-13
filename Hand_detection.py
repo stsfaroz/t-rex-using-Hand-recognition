@@ -11,7 +11,7 @@ cap = cv2.VideoCapture(0)
 hand_cascade = cv2.CascadeClassifier('hand.xml')
 count = 0
 print("ok")
-driver = webdriver.Chrome(executable_path='/home/stsfaroz/chromedriver_linux64/chromedriver')
+driver = webdriver.Chrome(executable_path='./chromedriver')
 driver.get('https://chromedino.com/')
 
 
@@ -41,7 +41,7 @@ while True:
                 cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
         elif len(contour)==1:
-            cv2.putText(img=frame, text='Jump pannuda', org=(int(100 / 2 - 20), int(100 / 2)),
+            cv2.putText(img=frame, text='Jump', org=(int(100 / 2 - 20), int(100 / 2)),
                         fontFace=cv2.FONT_HERSHEY_DUPLEX, fontScale=1,
                         color=(0, 255, 0))
             driver.find_element_by_css_selector('body').send_keys(Keys.UP)
@@ -49,7 +49,7 @@ while True:
                 cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
         elif len(contour)==0:
-            cv2.putText(img=frame, text='Odu Raja', org=(int(100 / 2 - 20), int(100 / 2)),
+            cv2.putText(img=frame, text='Running', org=(int(100 / 2 - 20), int(100 / 2)),
                         fontFace=cv2.FONT_HERSHEY_DUPLEX, fontScale=1,
                         color=(0, 0, 255))
 
