@@ -1,4 +1,4 @@
-# t-rex-using-Hand-recognition
+# t-rex-Game-playing-Hand-recognition with Selenium
 
 ##### How to run
 ```
@@ -14,3 +14,4 @@ pip install numpy
 ```
 python Hand_detection.py
 ```
+show the fist to jump
